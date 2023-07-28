@@ -44,6 +44,8 @@ public class ProgramSellerTest {
 		seller.setName("Martha Wayne");
 		sellerDao.update(seller);
 		System.out.println("Update Completed!");
+		
+		
 		System.out.println("\n=== TEST 6: seller delete ===");
 		System.out.println("Enter id for delete test: ");
 		Integer id = sc.nextInt();

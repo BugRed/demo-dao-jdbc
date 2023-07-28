@@ -20,11 +20,23 @@ public class ProgramDepartmentTest {
 		System.out.println(department);
 		
 		
-		System.out.println("\n=== TEST 3: Department findAll ===");
+		System.out.println("\n=== TEST 2: Department findAll ===");
 		list = departmentDao.findAll();
 		for (Department obj : list) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("\n=== TEST 3: Department insert ===");
+		Department newDepartment = new Department(null, "Codex");
+		departmentDao.insert(newDepartment);
+		System.out.println("Inserted! New id= " + newDepartment.getId());
+		
+		
+		System.out.println("\n=== TEST 4: Department update ===");
+		department = departmentDao.findById(1);
+		department.setName("Integração");
+		departmentDao.update(department);
+		System.out.println("Update Completed!");
 
 	}
 
